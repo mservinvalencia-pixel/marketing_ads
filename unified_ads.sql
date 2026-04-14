@@ -1,0 +1,92 @@
+CREATE OR REPLACE TABLE marketing_ads.unified_ads AS
+
+SELECT
+  PARSE_DATE('%m/%d/%y', date) AS date,
+  'facebook' AS platform,
+  campaign_id,
+  campaign_name,
+  ad_set_id AS ad_group_id,
+  ad_set_name AS ad_group_name,
+  impressions,
+  clicks,
+  spend,
+  conversions,
+  video_views,
+  engagement_rate,
+  reach,
+  frequency,
+  NULL AS conversion_value,
+  NULL AS ctr,
+  NULL AS avg_cpc,
+  NULL AS quality_score,
+  NULL AS search_impression_share,
+  NULL AS video_watch_25,
+  NULL AS video_watch_50,
+  NULL AS video_watch_75,
+  NULL AS video_watch_100,
+  NULL AS likes,
+  NULL AS shares,
+  NULL AS comments
+FROM marketing_ads.facebook_ads
+
+UNION ALL
+
+SELECT
+  PARSE_DATE('%m/%d/%y', date) AS date,
+  'google' AS platform,
+  campaign_id,
+  campaign_name,
+  ad_group_id,
+  ad_group_name,
+  impressions,
+  clicks,
+  cost AS spend,
+  conversions,
+  NULL AS video_views,
+  NULL AS engagement_rate,
+  NULL AS reach,
+  NULL AS frequency,
+  conversion_value,
+  ctr,
+  avg_cpc,
+  quality_score,
+  search_impression_share,
+  NULL AS video_watch_25,
+  NULL AS video_watch_50,
+  NULL AS video_watch_75,
+  NULL AS video_watch_100,
+  NULL AS likes,
+  NULL AS shares,
+  NULL AS comments
+FROM marketing_ads.google_ads
+
+UNION ALL
+
+SELECT
+  PARSE_DATE('%m/%d/%y', date) AS date,
+  'tiktok' AS platform,
+  campaign_id,
+  campaign_name,
+  adgroup_id AS ad_group_id,
+  adgroup_name AS ad_group_name,
+  impressions,
+  clicks,
+  cost AS spend,
+  conversions,
+  video_views,
+  NULL AS engagement_rate,
+  NULL AS reach,
+  NULL AS frequency,
+  NULL AS conversion_value,
+  NULL AS ctr,
+  NULL AS avg_cpc,
+  NULL AS quality_score,
+  NULL AS search_impression_share,
+  video_watch_25,
+  video_watch_50,
+  video_watch_75,
+  video_watch_100,
+  likes,
+  shares,
+  comments
+FROM marketing_ads.tiktok_ads;
