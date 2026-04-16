@@ -78,7 +78,7 @@ The dashboard was built in Looker Studio and designed to answer four key questio
 
 - Live dashboard: https://datastudio.google.com/s/s_0HPaFkskU
 - ALL PROCESS Video walkthrough: https://drive.google.com/file/d/1eqVlZ80Psu2-52kYnjT4IDGkIG53LVBL/view?usp=sharing
-- Only insights video: 
+
 
 ## Key Insights
 
