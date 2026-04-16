@@ -77,13 +77,15 @@ The dashboard was built in Looker Studio and designed to answer four key questio
 ## Deliverables
 
 - Live dashboard: https://datastudio.google.com/s/s_0HPaFkskU
-- Video walkthrough: https://drive.google.com/file/d/1eqVlZ80Psu2-52kYnjT4IDGkIG53LVBL/view?usp=sharing
+- ALL PROCESS Video walkthrough: https://drive.google.com/file/d/1eqVlZ80Psu2-52kYnjT4IDGkIG53LVBL/view?usp=sharing
+- Only insights video: 
 
 ## Key Insights
 
 - Google shows the strongest conversion efficiency, despite a higher CPC, suggesting higher-intent traffic.
 - TikTok drives the largest impression volume, but lower conversion efficiency, indicating a top-of-funnel role.
 - Facebook provides a more balanced performance between scale and efficiency.
+## - Final Insight: Facebook emerges as the most balanced channel, combining a conversion rate close to Google with a CPC closer to TikTok, making it the most efficient option for investment.
 
 
 ## Tech Stack
